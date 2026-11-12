@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="data:," />
+    <title>Notes Portal – Connected Frontend (MySQL backend)</title>
+    <script>
+      /* Apply the saved dark/light choice before first paint so the page
+         never flashes the wrong theme. Same key as the app uses. */
+      try{ var _t = localStorage.getItem("notesPortalThemeV1"); if(_t==="dark") document.documentElement.setAttribute("data-theme","dark"); }catch(e){}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div id="root">
+      <main class="wrap" style="padding:48px 16px">
+        <p style="color:var(--dim)">Loading the Notes Portal…</p>
+      </main>
+    </div>
+    <noscript><p style="padding:20px">This portal needs JavaScript (React) to run.</p></noscript>
+
+    <script src="vendor/react.production.min.js"></script>
+    <script src="vendor/react-dom.production.min.js"></script>
+    <script src="vendor/htm.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
